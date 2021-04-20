@@ -1,7 +1,7 @@
 version: "3.1"
 services:
     nginx:
-        image: 096925879815.dkr.ecr.eu-north-1.amazonaws.com/nginx1
+        image: 172446528082.dkr.ecr.eu-north-1.amazonaws.com/20210420nginx
         restart: always
         context: ./nginx
         ports:
@@ -13,6 +13,6 @@ services:
             - app
     app:
         restart: always
-        image: 096925879815.dkr.ecr.eu-north-1.amazonaws.com/app1
+        image: 172446528082.dkr.ecr.eu-north-1.amazonaws.com/20210420app
         expose:
         - "8080"
