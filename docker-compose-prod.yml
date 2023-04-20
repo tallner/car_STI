@@ -1,7 +1,7 @@
 version: "3.1"
 services:
     nginx:
-        image: 774054463613.dkr.ecr.eu-north-1.amazonaws.com/nginx1
+        image: 871582911345.dkr.ecr.eu-north-1.amazonaws.com/testnginx
         restart: always
         build:
             context: ./nginx
@@ -16,6 +16,6 @@ services:
         restart: always
         build: 
             context: .
-        image: 774054463613.dkr.ecr.eu-north-1.amazonaws.com/app1
+        image: 871582911345.dkr.ecr.eu-north-1.amazonaws.com/testappen
         expose:
         - "8080"
