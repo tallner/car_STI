@@ -1,10 +1,10 @@
 [
     {
       "name": "nginx",
-      "imageUri": "774054463613.dkr.ecr.eu-north-1.amazonaws.com/nginx1"
+      "imageUri": "871582911345.dkr.ecr.eu-north-1.amazonaws.com/testnginx"
     },
     {
       "name": "app",
-      "imageUri": "774054463613.dkr.ecr.eu-north-1.amazonaws.com/app1"
+      "imageUri": "871582911345.dkr.ecr.eu-north-1.amazonaws.com/testappen"
     }
   ]
