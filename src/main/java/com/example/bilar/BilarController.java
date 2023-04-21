@@ -19,9 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BilarController {
-
-    @Autowired
-    private BilarRepository bilarRepository;
     
     @GetMapping(value="/", produces = MediaType.TEXT_PLAIN_VALUE)
     @CrossOrigin()
@@ -33,23 +30,23 @@ public class BilarController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error checking health");
         }
     }
-
-
+    
     @GetMapping(value="/car", produces = MediaType.TEXT_PLAIN_VALUE)
     @CrossOrigin()
     public ResponseEntity<List<Bilar>> getall() {
 
         try {
-            // Perform health check logic here
-            var l = new ArrayList<Bilar>();
-            for(Bilar b : bilarRepository.findAll())
-            {
-                l.add(b);
-            }
+            var l = new ArrayList<Car>();
+        
+            l.add(new Car("Volvo", "XC70", "Blå", 2008,4));
+            l.add(new Car("Volvo", "XC60", "Svart", 2015,4));
+            l.add(new Car("Volvo", "240", "Röd", 1985,6));
+            l.add(new Car("Renault", "Megane", "Svart", 2018,4));
+            
             return ResponseEntity.ok(l);
 
         } catch (Exception e) {
-            List<Bilar> emptyList = new ArrayList<Bilar>();
+            List<Car> emptyList = new ArrayList<Car>();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(emptyList);
         }
 
