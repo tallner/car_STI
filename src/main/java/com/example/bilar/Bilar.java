@@ -1,19 +1,28 @@
 package com.example.bilar;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 //fkn
 
-public class Car {
+@Entity
+public class Bilar {
+    
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     private static Integer num = 0;
 
-    public Car() {
+    public Bilar() {
         super();
-        id =  num++;
+      //  id =  num++;
     }
 
-    public Car(String namn,String model,String color, int year, int nrOfWheels  ) {
+    public Bilar(String namn,String model,String color, int year, int nrOfWheels  ) {
         super();
-        id =  num++;
+       // id =  num++;
         this.namn = namn;
         this.model = model;
         this.color = color;
@@ -26,7 +35,7 @@ public class Car {
         return id;
       }
     
-      public void setId(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
       }
     
