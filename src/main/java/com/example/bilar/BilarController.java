@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BilarController {
 
-    /* * /
+    /* */
     
     @GetMapping(value="/", produces = MediaType.TEXT_PLAIN_VALUE)
     @CrossOrigin()
@@ -32,7 +32,7 @@ public class BilarController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error checking health");
         }
     }
-    
+    /* * /
     @GetMapping(value="/car", produces = MediaType.TEXT_PLAIN_VALUE)
     @CrossOrigin()
     public ResponseEntity<List<Car>> getall() {
@@ -54,14 +54,14 @@ public class BilarController {
 
     }
 
-/* */
+/* * /
 
     @GetMapping(value="/")
     @CrossOrigin()
     public String empty(){
         return "version";
     }
-
+/* */
 
 
     @GetMapping(value="/car")
