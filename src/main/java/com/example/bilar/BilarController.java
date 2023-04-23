@@ -66,14 +66,14 @@ public class BilarController {
 
     @GetMapping(value="/car", produces = MediaType.TEXT_PLAIN_VALUE)
     @CrossOrigin()
-    public ResponseEntity<List<Car>> getall() {
+    public List<Car> getall() {
         var l = new ArrayList<Car>();
 
         l.add(new Car("Volvo", "XC70", "Blå", 2008,4));
         l.add(new Car("Volvo", "XC60", "Svart", 2015,4));
         l.add(new Car("Volvo", "240", "Röd", 1985,6));
         l.add(new Car("Renault", "Megane", "Svart", 2018,4));
-        return ResponseEntity.ok(l);
+        return l;
 
     }
     
