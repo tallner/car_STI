@@ -64,7 +64,7 @@ public class BilarController {
 /* */
 
 
-    @GetMapping(value="/car", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value="/car", produces = MediaType.APPLICATION_JSON_VALUE)
     @CrossOrigin()
     public List<Car> getall() {
         var l = new ArrayList<Car>();
