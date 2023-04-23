@@ -19,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BilarController {
+
+    /* * /
     
     @GetMapping(value="/", produces = MediaType.TEXT_PLAIN_VALUE)
     @CrossOrigin()
@@ -49,6 +51,29 @@ public class BilarController {
             List<Car> emptyList = new ArrayList<Car>();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(emptyList);
         }
+
+    }
+
+/* */
+
+    @GetMapping(value="/")
+    @CrossOrigin()
+    public String empty(){
+        return "version";
+    }
+
+
+
+    @GetMapping(value="/car")
+    @CrossOrigin()
+    public List<Car> getall() {
+        var l = new ArrayList<Car>();
+
+        l.add(new Car("Volvo", "XC70", "Blå", 2008,4));
+        l.add(new Car("Volvo", "XC60", "Svart", 2015,4));
+        l.add(new Car("Volvo", "240", "Röd", 1985,6));
+        l.add(new Car("Renault", "Megane", "Svart", 2018,4));
+        return l;
 
     }
     
