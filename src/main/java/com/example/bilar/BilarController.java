@@ -36,7 +36,7 @@ public class BilarController {
     }
 
 
-    @GetMapping(value="/car", produces = MediaType.TEXT_PLAIN_VALUE)
+    @GetMapping(value="/car", produces = MediaType.APPLICATION_JSON_VALUE)
     @CrossOrigin()
     public ResponseEntity<List<Bilar>> getall() {
 
@@ -47,7 +47,8 @@ public class BilarController {
             {
                 l.add(b);
             }
-            return ResponseEntity.ok(l);
+            //return ResponseEntity.ok(l);
+            return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(l);
 
         } catch (Exception e) {
             List<Bilar> emptyList = new ArrayList<Bilar>();
