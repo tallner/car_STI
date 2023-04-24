@@ -7,11 +7,11 @@ import javax.persistence.Id;
 
 //fkn
 
-@Entity
+//@Entity
 public class Bilar {
     
-    @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    //@Id
+    //@GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     private static Integer num = 0;
 
