@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class BilarController {
     
     
-  //  @Autowired
-  //  private BilarRepository bilarRepository;
+    @Autowired
+    private BilarRepository bilarRepository;
     
     @GetMapping(value="/", produces = MediaType.TEXT_PLAIN_VALUE)
     @CrossOrigin()
@@ -35,7 +35,7 @@ public class BilarController {
         }
     }
 
-/* * /
+/* */
     @GetMapping(value="/car", produces = MediaType.APPLICATION_JSON_VALUE)
     @CrossOrigin()
     public ResponseEntity<List<Bilar>> getall() {
@@ -43,7 +43,7 @@ public class BilarController {
         try {
             // Perform health check logic here
             var l = new ArrayList<Bilar>();
-         /* * /   for(Bilar b : bilarRepository.findAll())
+         /* */   for(Bilar b : bilarRepository.findAll())
             {
                 l.add(b);
             }

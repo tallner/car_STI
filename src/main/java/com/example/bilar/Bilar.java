@@ -1,14 +1,17 @@
 package com.example.bilar;
 
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 //fkn
 
-//@Entity
+@Entity
 public class Bilar {
     
-    //@Id
-    //@GeneratedValue(strategy=GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     private static Integer num = 0;
 
