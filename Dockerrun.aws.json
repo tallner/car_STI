@@ -4,14 +4,14 @@
     "containerDefinitions": [
       {
         "name": "app",
-        "image": "871582911345.dkr.ecr.eu-north-1.amazonaws.com/testappen",
+        "image": "871582911345.dkr.ecr.eu-north-1.amazonaws.com/25042024app1",
         "hostname": "app",
         "essential": false,
         "memory": 128
       },
       {
         "name": "nginx",
-        "image": "871582911345.dkr.ecr.eu-north-1.amazonaws.com/testnginx",
+        "image": "871582911345.dkr.ecr.eu-north-1.amazonaws.com/25042024nginx",
         "hostname": "nginx",
         "essential": true,
         "portMappings": [

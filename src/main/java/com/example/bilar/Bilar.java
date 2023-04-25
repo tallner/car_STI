@@ -13,7 +13,7 @@ public class Bilar {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
-    private static Integer num = 0;
+    //private static Integer num = 0;
 
     public Bilar() {
         super();
